@@ -1,0 +1,15 @@
+{
+  "name": "metamask-initialization-bug",
+  "version": "1.0.0",
+  "description": "MetaMask initialization bug reproduction example",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx serve ./ -l 3030",
+    "browse": "google-chrome http://localhost:3030"
+  },
+  "author": "Denis Perov <denis.perov@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}

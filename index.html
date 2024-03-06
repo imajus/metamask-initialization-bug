@@ -1,0 +1,20 @@
+<body>
+  <h1 id="status">Loading...</h1>
+  <script>
+    var interval;
+    window.addEventListener('DOMContentLoaded', () => {
+      var status = document.getElementById('status');
+      window.addEventListener('eip6963:announceProvider', async (event) => {
+        clearInterval(interval);
+        window.ethereum.request({ method: 'eth_accounts' })
+          .then((accounts) => {
+            status.innerText = 'Accounts: ' + accounts.length;
+          })
+          .catch(err => status.innerText = 'Error: ' + err.message);
+      });
+      interval = setInterval(() => {
+        window.dispatchEvent(new Event('eip6963:requestProvider'));
+      }, 50);
+    });
+  </script>
+</body>
