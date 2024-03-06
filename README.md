@@ -39,6 +39,10 @@ localhost/:1 Unchecked runtime.lastError: Could not establish connection. Receiv
 
 If the browser page is then refreshed, the expected outcome is reached.
 
+Consider the video recording of the full reproduction flow:
+
+[Screencast from 2024-03-06 11-01-16.webm](https://github.com/imajus/metamask-initialization-bug/assets/1805633/f9471536-278b-402c-8995-a592914bab42)
+
 ## Prerequisites
 
 - This repository was made and tested on Ubuntu 23.10 with Node 21.5.
